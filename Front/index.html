@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Eurolyga</title>
+</head>
+
+<body>
+  <section class="section">
+    <div class="block">
+      <div class="main">
+        <ul class="event-info_list">
+          <li class="event-round"></li>
+          <li class="event-date"></li>
+          <li class="event-stadium"></li>
+          <li class="event-time"></li>
+        </ul>
+
+        <div class="teams">
+          <!-- Block 1 -->
+          <div class="first-team">
+            <img src="./img/team1.webp" alt="">
+            <p class="team1"></p>
+          </div>
+          <!-- Block 2 -->
+          <div class="score">
+            <div class="results">
+              <div id="team1-rez" class="rez-color">
+              </div>
+              <div id="team2-rez" class="rez-color">
+              </div>
+            </div>
+            <div class="view-btn">
+              <button disabled="disabled" class="final">FINAL</button>
+              <button class="btn-view">View standings</button>
+            </div>
+          </div>
+          <!-- Block 3 -->
+          <div class="second-team">
+            <img src="./img/team2.webp" alt="">
+            <p class="team2"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
