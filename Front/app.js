@@ -27,7 +27,7 @@ function updateData() {
 				".event-round"
 			).innerHTML = `Round ${jsonObj.kelinys}`;
 
-			// Pasalinam spalva
+			// Remove text color
 			document.querySelector("#team1-rez").classList.remove("rez-color--green");
 			document.querySelector("#team2-rez").classList.remove("rez-color--green");
 

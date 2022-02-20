@@ -1,20 +1,23 @@
 import express from "express";
-import cors from "cors";
-import Krepsinis from "./krepsinis.js";
+import cors from "cors"; // Reikalingas, kad pasileistu Back ir Front serveriai
+import Basketball from "./basketball.js";
 
 const app = express();
 app.use(cors());
 
+// Random number generator
 function randomNum(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// Date generator
 function getDate() {
 	const timeElapsed = Date.now();
 	const today = new Date(timeElapsed);
 	return today.toDateString().slice(4);
 }
 
+// Time generator
 function getTime() {
 	const d = new Date();
 	return d.getHours() + ":" + d.getMinutes();
@@ -35,8 +38,8 @@ function getStartData() {
 
 function getUpdatedData() {
 	return {
-		team1rez: randomNum(0, 99),
-		team2rez: randomNum(0, 99),
+		team1rez: randomNum(0, 120),
+		team2rez: randomNum(0, 120),
 	};
 }
 
@@ -48,11 +51,10 @@ app.get("/update", (req, res) => {
 	res.json(getUpdatedData());
 });
 
-const rezultatas = new Krepsinis();
-// console.log(rezultatas);
+const rezult = new Basketball();
 
 app.get("/checkscore", (req, res) => {
-	res.json(rezultatas);
+	res.json(rezult);
 });
 
-app.listen(3001);
+app.listen(3001); // Server port
