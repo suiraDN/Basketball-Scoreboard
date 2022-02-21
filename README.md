@@ -17,6 +17,13 @@ After dependencies installation run a command:
 
 > Server start with :3001 port -> [http://localhost:3001](http://localhost:3001)
 
+#### _More info_
+
+I used:
+- `nodemon`
+- `express`      
+- `core` for join two servers.
+
 
 ### 🟡 _FrontEnd_ 
 
@@ -26,3 +33,7 @@ Do same in Front directory:
   - npm run dev
 
 > Frontend server start with :5000 port -> [http://localhost:5000](http://localhost:5000)
+
+#### _More info_
+
+Using `dead-server` for live page prewiev.
